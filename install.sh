@@ -25,5 +25,7 @@ done
 # Download bullet-train theme.
 bulletTrain="bullet-train.zsh-theme"
 bulletTrainDir="$ZSH"/themes/
-echo "Download $bulletTrain oh-my-zsh theme and install it to $bulletTrainDir"
-curl -o $bulletTrainDir/$bulletTrain https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+if [ ! -f $bulletTrainDir/$bulletTrain ]; then 
+	echo "Download $bulletTrain oh-my-zsh theme and install it to $bulletTrainDir"
+	curl -o $bulletTrainDir/$bulletTrain https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+fi
