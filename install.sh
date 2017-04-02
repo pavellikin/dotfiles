@@ -7,7 +7,7 @@ NAME=$(basename $0)
 # Cleanup old configs, then link a new one.
 for entry in `ls $DIR`
 do
-	if [[ $NAME == $entry ]]; then
+	if [ $NAME == $entry ]; then
 		echo "Ignore $NAME script"
 		continue
 	fi
