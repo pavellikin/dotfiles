@@ -1,0 +1,6 @@
+[user]
+	name = Pavel Likin
+	email = pavellikin@gmail.com
+[core]
+	editor = /Applications/Sublime Text.app/Contents/MacOS/Sublime Text
+	excludesfile = /Users/pavellikin/.gitignore
