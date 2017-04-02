@@ -2,5 +2,13 @@
 	name = Pavel Likin
 	email = pavellikin@gmail.com
 [core]
-	editor = /Applications/Sublime Text.app/Contents/MacOS/Sublime Text
-	excludesfile = /Users/pavellikin/.gitignore
+	editor = /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl -n -w
+	excludesfile = ~/.gitignore
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+[pull]
+	rebase = true
+[push]
+	default = simple

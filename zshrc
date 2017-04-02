@@ -1,7 +1,3 @@
-#Environment variables
-export M2_HOME=/usr/local/Cellar/maven/3.3.9
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -9,8 +5,20 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="bullet-train"
+BULLETTRAIN_PROMPT_ORDER=(
+	time
+	status
+	custom
+	context
+	dir
+	perl
+	virtualenv
+	go
+	git
+	hg
+	cmd_exec_time
+)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,18 +67,6 @@ plugins=(git autojump brew common-aliases gitfast git-extras httpie jsontools mv
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# User configuration
-unset M2_HOME
-unset M2
-
-export M3_HOME=/usr/local/Cellar/maven/3.3.9
-export M3=/usr/local/Cellar/maven/3.3.9/bin
-
-export SCALA_HOME=/usr/local/opt/scala/idea
-export GOPATH=$HOME/workspace/go
-
-export PATH=$PATH:/usr/local/go/bin:$SCALA_HOME../bin
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -103,3 +99,24 @@ setopt noincappendhistory
 setopt nosharehistory
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+######################
+# User configuration #
+######################
+bindkey "\e\[1\;9C" forward-word
+bindkey "\e\[1\;9D" backward-word
+bindkey "\e\[dw" backward-kill-word
+
+unset M2_HOME
+unset M2
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+export M3_HOME=/usr/local/Cellar/maven/3.3.9
+export M3=/usr/local/Cellar/maven/3.3.9/bin
+
+export SCALA_HOME=/usr/local/opt/scala/idea
+export GOPATH=$HOME/workspace/go
+
+export PATH=$PATH:/usr/local/go/bin:$SCALA_HOME../bin
+######################
