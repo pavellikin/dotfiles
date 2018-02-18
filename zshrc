@@ -112,10 +112,8 @@ unset M2
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-export M3_HOME=/usr/local/Cellar/maven/3.3.9
-export M3=/usr/local/Cellar/maven/3.3.9/bin
-
 export SCALA_HOME=/usr/local/opt/scala/idea
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export GOPATH=$HOME/workspace/go
 
 export PATH=$PATH:/usr/local/go/bin:$SCALA_HOME../bin
