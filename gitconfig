@@ -2,7 +2,7 @@
 	name = Pavel Likin
 	email = pavellikin@gmail.com
 [core]
-	editor = /Applications/Sublime\\ Text.app/Contents/SharedSupport/bin/subl -n -w
+	editor = code
 	excludesfile = ~/.gitignore
 	autocrlf = input
 [color]
