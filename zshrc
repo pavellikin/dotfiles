@@ -99,10 +99,14 @@ unset M2_HOME
 unset M2
 
 export JAVA_HOME=$(/usr/libexec/java_home)
-
 export SCALA_HOME=/usr/local/opt/scala/idea
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+export RUBY_HOME=/usr/local/opt/ruby/bi
+export GEM_HOME=$HOME/.gem
+
+export GO_HOME=/usr/local/go/bin
 export GOPATH=$HOME/workspace/go
 
-export PATH=$PATH:/usr/local/go/bin:$SCALA_HOME../bin
+export PATH=$RUBY_HOME:$GEM_HOME/bin:$PATH:$GO_HOME:$SCALA_HOME../bin
 ######################
