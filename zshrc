@@ -98,7 +98,11 @@ bindkey "\e\[dw" backward-kill-word
 unset M2_HOME
 unset M2
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    export JAVA_HOME=$(/usr/libexec/java_home)
+fi
 export SCALA_HOME=/usr/local/opt/scala/idea
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
