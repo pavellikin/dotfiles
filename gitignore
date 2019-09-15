@@ -8,7 +8,6 @@
 target/
 
 # Compiled files
-*.com
 *.class
 *.dll
 *.exe

@@ -11,13 +11,17 @@ do
 		echo "Ignore $NAME script"
 		continue
 	fi
-
+	entryLocation=`pwd $DIR`/"$entry"
+	if [ "java.zsh" == $entry ]; then
+		customConfigLocation = ~/.oh-my-zsh/custom/$entry
+		rm $customConfigLocation
+		echo "Create a symbolic link for $customConfigLocation"
+		ln -s $entryLocation $customConfigLocation
+		continue
+	fi
 	dotEntry=".$entry"
-
 	echo "Remove old config file for $dotEntry"
 	rm ~/"$dotEntry"
-
-	entryLocation=`pwd $DIR`/"$entry"
 	echo "Create a symbolic link $dotEntry for a new config located in $entryLocation"
 	ln -s $entryLocation ~/"$dotEntry"
 done

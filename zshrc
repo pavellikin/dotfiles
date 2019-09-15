@@ -49,7 +49,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump brew common-aliases gitfast git-extras httpie jsontools mvn osx sublime tmux zsh-autosuggestions)
+plugins=(git autojump brew common-aliases gitfast git-extras httpie jsontools mvn osx sublime tmux)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -110,7 +110,7 @@ export RUBY_HOME=/usr/local/opt/ruby/bi
 export GEM_HOME=$HOME/.gem
 
 export GO_HOME=/usr/local/go/bin
-export GOPATH=$HOME/workspace/go
+export GOPATH=$HOME/go
 
 export PATH=$RUBY_HOME:$GEM_HOME/bin:$PATH:$GO_HOME:$SCALA_HOME../bin
 ######################
