@@ -2,7 +2,7 @@
 	name = Pavel Likin
 	email = pavellikin@gmail.com
 [core]
-	editor = code
+	editor = vim
 	excludesfile = ~/.gitignore
 	autocrlf = input
 [color]
@@ -13,3 +13,14 @@
 	rebase = true
 [push]
 	default = simple
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
+[merge]
+	tool = meld
+	conflictstyle = zdiff3
+[diff]
+	colorMoved = default
+	algorithm = histogram
+[branch]
+	sort = -committerdate
