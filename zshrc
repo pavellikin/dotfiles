@@ -55,4 +55,7 @@ export GO_HOME=/usr/local/go/bin
 export GOPATH=$HOME/go
 
 export PATH=$RUBY_HOME:$GEM_HOME/bin:$PATH:$GO_HOME
+
+alias colima-start="colima start --arch aarch64 --cpu 2 --memory 2 --network-address"
+alias colima-stop="colima stop"
 ######################
