@@ -1,0 +1,11 @@
+brew "git"
+brew "tmux"
+brew "hledger"
+brew "htop"
+brew "mole"
+brew "ncdu"
+brew "neovim"
+brew "openjdk@25"
+
+cask "raycast"
+cask "ghostty"

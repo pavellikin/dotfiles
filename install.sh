@@ -3,7 +3,16 @@
 DIR=$(dirname $0)
 NAME=$(basename $0)
 
-# Define config list. 
+# Install Homebrew
+if ! command -v brew &>/dev/null; then
+  echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+echo "Installing Homebrew packages..."
+brew bundle --file="$DIR/Brewfile"
+
+# Define config list.
 # Cleanup old configs, then link a new one.
 for entry in `ls $DIR`
 do
